@@ -21,4 +21,9 @@ public class SettlementTransaction extends BaseModel {
     private double amount;
     private Currency currency;
 
+    public SettlementTransaction(User lender, User borrower, double amount) {
+        Lender = lender;
+        this.borrower = borrower;
+        this.amount = amount;
+    }
 }

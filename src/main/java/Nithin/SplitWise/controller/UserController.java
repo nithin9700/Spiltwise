@@ -24,7 +24,7 @@ public class UserController {
         User user = DTOEntityDTO.toEntity(userSignUpRequestDTO);
         signUpValidate(user);
         return ResponseEntity.ok(
-                EntityDTOMapper.toDTO(
+                EntityDTOMapper.toSignupDTO(
                         userService.signUp(
                                             userSignUpRequestDTO.getFirstName(), userSignUpRequestDTO.getLastName(),
                                             userSignUpRequestDTO.getEmail(), userSignUpRequestDTO.getPassword()
@@ -37,7 +37,7 @@ public class UserController {
         loginValidate(user);
 
         return ResponseEntity.ok(
-                EntityDTOMapper.toDTO(
+                EntityDTOMapper.toLoginDTO(
                         userService.login(user.getEmail(), user.getPassword())
                 )
         );
