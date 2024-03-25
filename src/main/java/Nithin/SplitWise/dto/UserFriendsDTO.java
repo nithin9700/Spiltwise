@@ -1,15 +1,14 @@
 package Nithin.SplitWise.dto;
 
 
-import Nithin.SplitWise.entity.User;
 import lombok.Getter;
 import lombok.Setter;
 
-@Setter
 @Getter
-public class UserFriendDTO {
+@Setter
+public class UserFriendsDTO {
     private long id;
     private String email;
-
+    private UserFriendDTO userFriendDTO;
 
 }

@@ -44,7 +44,7 @@ public class EntityDTOMapper {
     private static UserFriendDTO addFriends(User friend){
         UserFriendDTO userFriendDTO = new UserFriendDTO();
         userFriendDTO.setId(friend.getId());
-        userFriendDTO.setName(friend.getFirst_name()+", "+ friend.getLast_name());
+        userFriendDTO.setEmail(friend.getEmail());
         return userFriendDTO;
     }
     private static UserGroupDTO addGroup(Group group){
